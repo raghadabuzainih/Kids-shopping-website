@@ -1,0 +1,253 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 4rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: peru;
+    color: white;
+}
+
+nav h1{
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+
+nav a i{
+    margin-top: 1.4rem;
+    font-size: 1.5rem;
+}
+
+.numItems{
+    color: black;
+    font-weight: bold;
+}
+
+.all-sections{
+    display: flex;
+    gap: 3rem;
+    margin-top: -1px;
+}
+
+.clothes, .shoes{
+    display: block;
+    text-align: start;
+    align-items: start;
+    justify-items: start;
+}
+
+.clothes div, .shoes div{
+    display: flex;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+nav ul{
+    position: absolute;
+    padding: 0 1rem;
+    list-style: none;
+    top: 2rem;
+    background-color: peru;
+}
+
+ul li{
+    line-height: 1rem;
+}
+
+.all-sections i{
+    margin-top: 1.8rem;
+}
+
+nav a{
+    color: white;
+    &:hover{
+        color: black;
+    }
+}
+
+.user{
+    display: flex;
+    gap: 2rem;
+    margin-right: 1rem;
+}
+
+section{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 6rem;
+    left: 2.4rem;
+    z-index: -1;
+    padding-bottom: 2.3rem;
+}
+
+.item{
+    border: 1px solid peru;
+    cursor: pointer;
+    width: 16.5rem;
+}
+
+.item img{
+    width: 16.5rem;
+    height: 16.5rem;
+}
+
+.item div{
+    margin-left: 1rem;
+}
+
+.price{
+    color: red;
+}
+
+section button, .details button{
+    width: 100%;
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color: peru;
+
+    &:hover{
+        background-color: black;
+    }
+}
+
+.outer-div{
+    display: flex;
+    gap: 2rem;
+    margin: 0 1.6rem;
+    margin-top: 6.1rem;
+}
+
+.arrow-div{
+    position: relative;
+    bottom: 22rem;
+    display: flex;
+    gap: 32.6rem;
+}
+
+.arrow-div i{
+    font-size: 2rem;
+}
+
+.arrow-div button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.details{
+    display: block;
+}
+
+.quantity-div{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.quantity-div button{
+    width: 3rem;
+}
+
+.login, .signup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background: url('images/registerShopping.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat; 
+}
+
+.log-sign-form{
+    position: absolute;
+    top: 4rem;
+    margin-left: 13rem;
+    font-size: larger;
+    width: 15.3rem;
+    border-radius: 1rem;
+    border: 2px dashed black;
+    padding: 2rem;
+    padding-top: 0;
+    background-color: white;
+}
+
+.log-sign-form label, p, .log-sign-form form button{
+    font-weight: bold;
+}
+
+.log-sign-form div{
+    color: rgb(179, 54, 54);
+    font-size: small; 
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.log-sign-form input, .log-sign-form button{
+    font-size: 1rem;
+    padding: .4rem;
+    width: 15rem;
+    height: 2rem;
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+    background-color: rgb(132, 215, 253);
+    border: none;
+}
+
+.log-sign-form button{
+    width: 15.8rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+.card-items{
+    display: flex;
+    margin: 5rem 1rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.saved-item{
+    display: flex;
+    width: 29rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.saved-item span{
+    color: red;
+}
+
+.saved-item a{
+    color: peru;
+}
+
+.saved-item button{
+    background-color: peru;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    &:hover{
+        background-color: black;
+    }
+}

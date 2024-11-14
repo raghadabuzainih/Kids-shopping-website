@@ -1,0 +1,562 @@
+[
+   {
+      "image" : "./images/toys/beautySal1.jpg",
+      "title" : "Beauty Salon",
+      "section" : "Toys",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "beauty-salon"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl3.jpg",
+      "title" : "Minnie mouse",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "10-11 years",
+      "price" : "₪20",
+      "quantity" : "1",
+      "id" : "bjamaGirl3"
+   },
+   {
+      "image" : "./images/shoes/boys/boy5.jpg",
+      "title" : "Adidas boot",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "31-32",
+      "price" : "₪35",
+      "quantity" : "1",
+      "id" : "boy5"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy.jpg",
+      "title" : "Beer",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "9-10 years",
+      "price" : "₪30",
+      "quantity" : "1",
+      "id" : "bjamaBoy1"
+   },
+   {
+      "image" : "./images/toys/pink-car.webp",
+      "title" : "Car",
+      "section" : "Toys",
+      "price" : "₪10",
+      "quantity" : "1",
+      "id" : "car"
+   },
+   {
+      "image" : "./images/shoes/girls/girl1.jpg",
+      "title" : "Sandal with a hole",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "25-26-27",
+      "price" : "₪25",
+      "quantity" : "1",
+      "id" : "girl1"
+   },
+   {
+      "image" : "./images/toys/carRace1.jpg",
+      "title" : "Car Race Trace",
+      "section" : "Toys",
+      "price" : "₪70",
+      "quantity" : "1",
+      "id" : "car-race-trace"
+   },
+   {
+      "image" : "./images/shoes/girls/girl6.jpg",
+      "title" : "Warm boot",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "29-30-31",
+      "price" : "₪40",
+      "quantity" : "1",
+      "id" : "girl6"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy6.jpg",
+      "title" : "Lions fire",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "10-11 years",
+      "price" : "₪25",
+      "quantity" : "1",
+      "id" : "outBoy6"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy2.jpg",
+      "title" : "White with lines",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "7-8 years",
+      "price" : "₪10",
+      "quantity" : "1",
+      "id" : "bjamaBoy2"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl5.jpg",
+      "title" : "Cute winter jacket",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "1-2 years",
+      "price" : "₪45",
+      "quantity" : "1",
+      "id" : "outGirl5"
+   },
+   {
+      "image" : "./images/shoes/girls/girl8.jpg",
+      "title" : "Shiny pink sandal",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "34-35",
+      "price" : "₪40",
+      "quantity" : "1",
+      "id" : "girl8"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy3.jpg",
+      "title" : "Baby dinosaur",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "3-4 years",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "bjamaBoy3"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy5.jpg",
+      "title" : "Colorful Mickey",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "4-5 years",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "bjamaBoy5"
+   },
+   {
+      "image" : "./images/shoes/boys/boy7.jpg",
+      "title" : "White with light",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "29-34-35",
+      "price" : "₪35",
+      "quantity" : "1",
+      "id" : "boy7"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl7.jpg",
+      "title" : "Cute sleepy",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "8-9 years",
+      "price" : "₪10",
+      "quantity" : "1",
+      "id" : "bjamaGirl7"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy6.jpg",
+      "title" : "Mickey Mouse",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "4-5 years",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "bjamaBoy6"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy7.jpg",
+      "title" : "Blue with white lines",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "6-7 years",
+      "price" : "₪10",
+      "quantity" : "1",
+      "id" : "bjamaBoy7"
+   },
+   {
+      "image" : "./images/shoes/girls/girl5.jpg",
+      "title" : "Pink winter",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "23-24-25",
+      "price" : "₪40",
+      "quantity" : "1",
+      "id" : "girl5"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy8.jpg",
+      "title" : "Blue with graphics",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "3-4 years",
+      "price" : "₪12",
+      "quantity" : "1",
+      "id" : "bjamaBoy8"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy.jpg",
+      "title" : "Black & white A",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "1-2 years",
+      "price" : "₪25",
+      "quantity" : "1",
+      "id" : "outBoy1"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy3.jpg",
+      "title" : "Olive color",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "4-5 years",
+      "price" : "₪30",
+      "quantity" : "1",
+      "id" : "outBoy3"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl6.jpg",
+      "title" : "Pink formal suit",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "9-10 years",
+      "price" : "₪55",
+      "quantity" : "1",
+      "id" : "outGirl6"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy5.jpg",
+      "title" : "Teryx",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "6-7 years",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "outBoy5"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy7.jpg",
+      "title" : "Adidas",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "10-11 years",
+      "price" : "₪35",
+      "quantity" : "1",
+      "id" : "outBoy7"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl.jpg",
+      "title" : "Disney",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "3-4-5 years",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "bjamaGirl1"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl2.jpg",
+      "title" : "Butterflies",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "7-8 years",
+      "price" : "₪10",
+      "quantity" : "1",
+      "id" : "bjamaGirl2"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl6.jpg",
+      "title" : "Short and blouse",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "3-4 years",
+      "price" : "₪10",
+      "quantity" : "1",
+      "id" : "bjamaGirl6"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy2.jpg",
+      "title" : "Jacket with pant",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "2-3 years",
+      "price" : "₪50",
+      "quantity" : "1",
+      "id" : "outBoy2"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl8.jpg",
+      "title" : "Smile",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "5-6 years",
+      "price" : "₪12",
+      "quantity" : "1",
+      "id" : "bjamaGirl8"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl2.jpg",
+      "title" : "Brown heart",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "3-4 years",
+      "price" : "₪10",
+      "quantity" : "1",
+      "id" : "outGirl2"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl8.jpg",
+      "title" : "Autumn set",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "11-12 years",
+      "price" : "₪30",
+      "quantity" : "1",
+      "id" : "outGirl8"
+   },
+   {
+      "image" : "./images/toys/telephone.webp",
+      "title" : "Telephone Like Car",
+      "section" : "Toys",
+      "price" : "₪7",
+      "quantity" : "1",
+      "id" : "telephone-like-car"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy8.jpg",
+      "title" : "Cute little dinosaur",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "1 year",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "outBoy8"
+   },
+   {
+      "image" : "./images/shoes/boys/boy2.jpg",
+      "title" : "Black & white",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "20-21-22",
+      "price" : "₪30",
+      "quantity" : "1",
+      "id" : "boy2"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl5.jpg",
+      "title" : "Barbie white",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "2-3 years",
+      "price" : "₪45",
+      "quantity" : "1",
+      "id" : "bjamaGirl5"
+   },
+   {
+      "image" : "./images/shoes/boys/boy3.jpg",
+      "title" : "Black & grey",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "28-29-30",
+      "price" : "₪65",
+      "quantity" : "1",
+      "id" : "boy3"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl.jpg",
+      "title" : "Cherries with roses",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "2-3 years",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "outGirl1"
+   },
+   {
+      "image" : "./images/shoes/boys/boy4.jpg",
+      "title" : "Star",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "29-30-31-32",
+      "price" : "₪45",
+      "quantity" : "1",
+      "id" : "boy4"
+   },
+   {
+      "image" : "./images/shoes/boys/boy6.jpg",
+      "title" : "Lacoste",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "33-34",
+      "price" : "₪30",
+      "quantity" : "1",
+      "id" : "boy6"
+   },
+   {
+      "image" : "./images/clothes/boys/out-boy4.jpg",
+      "title" : "Army",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "out" ,
+      "age" : "4-5 years",
+      "price" : "₪25",
+      "quantity" : "1",
+      "id" : "outBoy4"
+   },
+   {
+      "image" : "./images/shoes/boys/boy8.jpg",
+      "title" : "Spider man",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "33-34-35",
+      "price" : "₪55",
+      "quantity" : "1",
+      "id" : "boy8"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl4.jpg",
+      "title" : "Pink with black",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "1-2 years",
+      "price" : "₪35",
+      "quantity" : "1",
+      "id" : "outGirl4"
+   },
+   {
+      "image" : "./images/shoes/girls/girl2.jpg",
+      "title" : "Shiny sandal",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "26-27-28",
+      "price" : "₪30",
+      "quantity" : "1",
+      "id" : "girl2"
+   },
+   {
+      "image" : "./images/toys/kitchen.webp",
+      "title" : "Kitchen",
+      "section" : "Toys",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "kitchen"
+   },
+   {
+      "image" : "./images/shoes/girls/girl3.jpg",
+      "title" : "Colorful",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "31-32-33-34",
+      "price" : "₪45",
+      "quantity" : "1",
+      "id" : "girl3"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl3.jpg",
+      "title" : "Pink with white",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "6-7 years",
+      "price" : "₪15",
+      "quantity" : "1",
+      "id" : "outGirl3"
+   },
+   {
+      "image" : "./images/shoes/girls/girl4.jpg",
+      "title" : "Red with black",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "23-24-25",
+      "price" : "₪50",
+      "quantity" : "1",
+      "id" : "girl4"
+   },
+   {
+      "image" : "./images/toys/dancing1.jpg",
+      "title" : "Dancing Cactus",
+      "section" : "Toys",
+      "price" : "₪7",
+      "quantity" : "1",
+      "id" : "dancing-cactus"
+   },
+   {
+      "image" : "./images/shoes/boys/boy1.jpg",
+      "title" : "Black & blue",
+      "section" : "Shoes",
+      "gender" : "boy",
+      "size" : "30-31",
+      "price" : "₪50",
+      "quantity" : "1",
+      "id" : "boy1"
+   },
+   {
+      "image" : "./images/clothes/girls/bjama-girl4.jpg",
+      "title" : "Barbie pink",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "pajama" ,
+      "age" : "5-6 years",
+      "price" : "₪50",
+      "quantity" : "1",
+      "id" : "bjamaGirl4"
+   },
+   {
+      "image" : "./images/clothes/boys/bjama-boy4.jpg",
+      "title" : "Lion king",
+      "section" : "Clothes",
+      "gender" : "boy",
+      "classification" : "pajama" ,
+      "age" : "5-6 years",
+      "price" : "₪12",
+      "quantity" : "1",
+      "id" : "bjamaBoy4"
+   },
+   {
+      "image" : "./images/shoes/girls/girl7.jpg",
+      "title" : "Minnie mouse boot",
+      "section" : "Shoes",
+      "gender" : "girl",
+      "size" : "19-20-21-22",
+      "price" : "₪35",
+      "quantity" : "1",
+      "id" : "girl7"
+   },
+   {
+      "image" : "./images/clothes/girls/out-girl7.jpg",
+      "title" : "Pink dress",
+      "section" : "Clothes",
+      "gender" : "girl",
+      "classification" : "out" ,
+      "age" : "7-8 years",
+      "price" : "₪20",
+      "quantity" : "1",
+      "id" : "outGirl7"
+   }
+]

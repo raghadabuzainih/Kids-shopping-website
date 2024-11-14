@@ -1,0 +1,121 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/itemsNav.ejs') %>
+<% if(user){ %>
+    <h4 class="<%= user._id %>" style="display: none;"><%= id %></h4>
+<% }else{ %>
+    <h4 class="null" style="display: none;"><%= id %></h4>
+<% } %>
+<div class="outer-div">
+    <div class="img-div">
+        <img src="" alt="">
+        <div class="arrow-div">
+            <button class="left"><i class="fa-solid fa-circle-arrow-left"></i></button>
+            <button class="right"><i class="fa-solid fa-circle-arrow-right"></i></button>
+        </div>
+    </div>
+    <div class="details">
+        <h2 class="title"></h2>
+        <h2 class="price"></h2>
+        <h3 style="display: none;"></h3>
+        <div class="quantity-div">
+            <button class="minus">-</button>
+            <h2 class="quantity">1</h2>
+            <button class="plus">+</button>
+        </div>
+        <form><button class="add-card">Add to card</button></form>
+    </div>
+</div>
+
+<script>
+    const h4 = document.querySelector('h4')
+    const image = document.querySelector('img')
+    const left = document.querySelector('.left')
+    const right = document.querySelector('.right')
+    const title = document.querySelector('.title')
+    const price = document.querySelector('.price')
+    const quantity = document.querySelector('.quantity')
+    const plus = document.querySelector('.plus')
+    const minus = document.querySelector('.minus')
+    const addToCard = document.querySelector('form button')
+    const form = document.querySelector('form')
+    const numItems = document.querySelector('.numItems')
+    const h3 = document.querySelector('h3')
+
+    fetch('/items.json')
+    .then(result=> result.json())
+    .then(data => {
+        data.forEach(inside => {
+            if(inside.id == h4.textContent){
+                if(inside.section == 'Shoes'){
+                    h3.style.display = 'block'
+                    h3.textContent = `Size : ${inside.size}`
+                }else if(inside.section == 'Clothes'){
+                    h3.style.display = 'block'
+                    h3.textContent = `Age : ${inside.age}`
+                }
+                image.src = inside.image
+                title.textContent = inside.title
+                price.textContent = inside.price
+
+                image.style.width = '38rem'
+                image.style.height = '37rem'
+                image.style.border = '1px dashed black'
+
+                addToCard.style.width = '17rem'
+                addToCard.style.display = 'block'
+
+                let i=0
+                fetch('/list-items.json')
+                .then(result => result.json())
+                .then(data => {
+                    const value = inside.id
+                    if(data[value] == undefined){
+                        left.style.display = 'none'
+                        right.style.display = 'none'
+                    }else{
+                        left.style.display = 'none'
+                        right.style.marginLeft = '35rem'
+                        right.addEventListener('click', ()=>{
+                            right.style.marginLeft = '0'
+                            left.style.display = 'block'
+                            image.src = data[value][++i]    
+                            if(i == data[value].length-1) right.style.display = 'none'                        
+                        })
+                        left.addEventListener('click', ()=>{
+                            right.style.display = 'block'
+                            image.src = data[value][--i]
+                            if(i == 0){
+                               right.style.marginLeft = '35rem'
+                               left.style.display = 'none' 
+                            } else right.style.marginLeft = '0'
+                        })
+                    }
+                })
+                plus.addEventListener('click', ()=>{
+                    quantity.textContent = Number(quantity.textContent) + 1
+                })
+                minus.addEventListener('click', ()=>{
+                    if(quantity.textContent > 1) quantity.textContent = Number(quantity.textContent) - 1
+                })
+                form.addEventListener('submit', async(e)=>{
+                e.preventDefault()
+                if(h4.className == 'null') location.assign('/login')
+                else{
+                    const res = await fetch('/item-:id', {
+                    method: 'POST',
+                    headers: {'Content-Type' : 'application/json'},
+                    body: JSON.stringify({userID: h4.className,itemID: inside.id, title: inside.title, price: inside.price, quantity: quantity.textContent})
+                    }).catch(err=> console.log(err))
+                
+                    const data = await res.json()
+                    numItems.textContent = data.numItems
+                }
+            })
+            }
+        })
+    })
+    .catch(err => {
+        console.log(err)
+    })
+</script>
+<%- include('./partials/footer.ejs') %>

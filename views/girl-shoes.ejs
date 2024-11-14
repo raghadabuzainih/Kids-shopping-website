@@ -1,0 +1,72 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/itemsNav.ejs') %>
+<% if(user){ %>
+    <section id="<%= user._id %>"></section>
+<% }else{ %>
+    <section id="null"></section>
+<% } %>
+
+<script>
+    const sec = document.querySelector('section')
+    const numItems = document.querySelector('.numItems')
+
+    fetch('./items.json')
+    .then(result => result.json())
+    .then(data => {
+        data.forEach(inside => {
+            if(inside.section == 'Shoes' && inside.gender == 'girl'){
+
+                const form = document.createElement('form')
+                const div = document.createElement('div')
+                div.className = 'item'
+                div.id = inside.id
+
+                const image = document.createElement('img')
+                image.src = inside.image
+                div.appendChild(image)
+
+                const innerDiv = document.createElement('div')
+            
+                const title = document.createElement('h1')
+                title.textContent = inside.title
+                innerDiv.appendChild(title)
+            
+                const price = document.createElement('h2')
+                price.className = 'price'
+                price.textContent = inside.price
+                innerDiv.appendChild(price)
+
+                div.appendChild(innerDiv)
+                form.appendChild(div)
+
+                const button = document.createElement('button')
+                button.textContent = 'Add To Cart'
+                form.appendChild(button)
+                sec.appendChild(form)
+
+                div.addEventListener('click', (e)=>{
+                    e.preventDefault()
+                    location.assign(`/item-${div.id}`)
+                })
+
+                form.addEventListener('submit', async(e)=>{
+                    e.preventDefault()
+                    if(sec.id == 'null') location.assign('/login')
+                    else{
+                        const res = await fetch('/shoes-girls', {
+                        method: 'POST',
+                        headers: {'Content-Type' : 'application/json'},
+                        body: JSON.stringify({userID: sec.id,itemID: inside.id, title: inside.title, price: inside.price, quantity: inside.quantity})
+                        }).catch(err=> console.log(err))
+
+                       const data = await res.json()
+                       numItems.textContent = data.numItems
+                    }
+                })          
+            }
+        });
+
+    })
+    .catch(err => console.log(err))
+</script>
+<%- include('./partials/footer.ejs') %>

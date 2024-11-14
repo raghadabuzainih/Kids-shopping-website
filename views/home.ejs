@@ -1,0 +1,132 @@
+<%- include('./partials/header.ejs') %>
+<nav>
+    <h1>kids shopping website</h1>
+    <div class="all-sections">
+        <div class="clothes">
+            <div>
+                <h2>Clothes</h2>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <ul style="display: none;" id="list-clothes">
+                <li><h3><a href="/clothes">All</a></h3></li>
+                <li><h3><a href="/clothes-girls">Girls</a></h3></li>
+                <li><h3><a href="/clothes-boys">Boys</a></h3></li>
+                <li><h3><a href="/clothes-pajamas">Pajamas</a></h3></li>
+                <li><h3><a href="/clothes-outing">Outing</a></h3></li>
+            </ul>
+        </div>
+        <div class="shoes">
+            <div>
+                <h2>Shoes</h2>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <ul style="display: none;" id="list-shoes">
+                <li><h3><a href="/shoes">All</a></h3></li>
+                <li><h3><a href="/shoes-girls">Girls</a></h3></li>
+                <li><h3><a href="/shoes-boys">Boys</a></h3></li>
+            </ul>
+        </div>
+        <h2><a href="/toys">Toys</a></h2>
+    </div>
+    <% if(user){ %>
+        <div class="user">
+            <a href="/listcard">
+                <i class="fa fa-cart-shopping"></i>
+                <label class="numItems"><%= user.cards.length %></label>
+            </a>
+            <h2><%= user.name %></h2>
+            <h2><a href="/logout">Log out</a></h2>
+        </div>
+    <% }else{ %>
+        <div class="user">
+            <h2><a href="/login">Log in</a></h2>
+            <h2><a href="/signup">Sign up</a></h2>
+        </div>
+    <% } %>
+</nav>
+
+<% if(user){ %>
+    <section id="<%= user._id %>"></section>
+<% }else{ %>
+    <section id="null"></section>
+<% } %>
+
+<script>
+    const nav = document.querySelector('nav')
+    const clothes = document.querySelector('.clothes')
+    const shoes = document.querySelector('.shoes')
+    const sec = document.querySelector('section')
+    const listClothes = document.getElementById('list-clothes')
+    const listShoes = document.getElementById('list-shoes')
+    const numItems = document.querySelector('.numItems')
+
+    fetch('./items.json')
+    .then(result => result.json())
+    .then(data => {
+        data.forEach(inside => {
+            const form = document.createElement('form')
+            const div = document.createElement('div')
+            div.className = 'item'
+            div.id = inside.id
+
+            const image = document.createElement('img')
+            image.src = inside.image
+            div.appendChild(image)
+
+            const innerDiv = document.createElement('div')
+            
+            const title = document.createElement('h1')
+            title.textContent = inside.title
+            innerDiv.appendChild(title)
+            
+            const price = document.createElement('h2')
+            price.className = 'price'
+            price.textContent = inside.price
+            innerDiv.appendChild(price)
+
+            div.appendChild(innerDiv)
+            form.appendChild(div)
+
+            const button = document.createElement('button')
+            button.textContent = 'Add To Cart'
+            form.appendChild(button)
+            sec.appendChild(form)
+
+            div.addEventListener('click', (e)=>{
+                e.preventDefault()
+                location.assign(`/item-${div.id}`)
+            })
+
+            clothes.addEventListener('click',()=>{
+                listClothes.style.display = 'block'
+                listShoes.style.display = 'none'
+            })
+            shoes.addEventListener('click',()=>{
+                listShoes.style.display = 'block'
+                listClothes.style.display = 'none'
+            })
+            sec.addEventListener('click',()=>{
+                listClothes.style.display = 'none'
+                listShoes.style.display = 'none'
+            })
+            
+            form.addEventListener('submit', async(e)=>{
+                e.preventDefault()
+                if(sec.id == 'null') location.assign('/login')
+                else{
+                    const res = await fetch('/', {
+                    method: 'POST',
+                    headers: {'Content-Type' : 'application/json'},
+                    body: JSON.stringify({userID: sec.id,itemID: inside.id, title: inside.title, price: inside.price, quantity: inside.quantity})
+                    }).catch(err=> console.log(err))
+                
+                    const data = await res.json()
+                    numItems.textContent = data.numItems
+                }
+            })
+        });
+
+    })
+    .catch(err => console.log(err))
+</script>
+<%- include('./partials/footer.ejs') %>

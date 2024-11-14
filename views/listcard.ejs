@@ -1,0 +1,56 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/itemsNav.ejs') %>
+<% if(user){ %>
+    <div class="card-items">
+        <% user.cards.forEach(card=>{ %>
+            <div class="saved-item">
+                <img src="" id="<%= card.itemID %>" style="width: 8rem; height: 7.5rem;">
+                <div>
+                    <p><span>Name: </span> <%= card.title %></p>
+                    <p><span>Price:</span> <%= card.price %></p>
+                    <p><span>Quantity: </span> <%= card.quantity %></p>
+                    <a href="/item-<%= card.itemID %>">Click for more details</a>
+                </div>
+                <form class="<%= card.itemID %>" id="<%= user._id %>">
+                    <button id="<%= user.cards.indexOf(card) %>">Remove item</button>
+                </form>
+            </div>
+        <% }) %>
+    </div>
+<% } %>
+<script>
+    const nav = document.querySelector('nav')
+    const img = document.querySelectorAll('img')
+    nav.style.marginBottom = '4rem'
+    fetch('/items.json')
+    .then(result=> result.json())
+    .then(data=>{
+        img.forEach(image=>{
+            let index = data.findIndex(obj => obj.id == image.id)
+            image.src = data[index].image
+        })
+    })
+    const forms = document.querySelectorAll('form')
+    forms.forEach(form => {
+        form.addEventListener('submit', async(e)=>{
+            e.preventDefault()
+            const button = form.querySelector('button')
+            try{
+                const res = await fetch('/listcard', {
+                    method: 'DELETE',
+                    body: JSON.stringify({userId: form.id, itemIndex: button.id}),
+                    headers: {'Content-type' : 'application/json'}
+                })
+                const data = await res.json()
+                if(data.success){
+                    location.assign('/listcard')
+                }
+            }catch(err){
+                console.log(err)
+            }
+
+        })
+    })
+
+</script>
+<%- include('./partials/footer.ejs') %>

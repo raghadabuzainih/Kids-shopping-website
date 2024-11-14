@@ -1,0 +1,20 @@
+
+    {
+        "beauty-salon" : [
+            "./images/toys/beautySal1.jpg",
+            "./images/toys/beautySal2.jpg"
+        ],
+        "car-race-trace" : [
+            "./images/toys/ccarRace1.jpg",
+            "./images/toys/carRace2.jpg",
+            "./images/toys/carRace3.webp"
+        ],
+        "dancing-cactus" : [
+            "./images/toys/dancing1.jpg",
+            "./images/toys/dancing2.webp"
+        ],
+        "boy8" : [
+            "./images/shoes/boys/boy8.jpg",
+            "./images/shoes/boys/boy8-2.jpg"
+        ]
+    }
